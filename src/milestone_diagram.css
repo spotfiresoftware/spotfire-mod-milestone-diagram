@@ -1,0 +1,218 @@
+/*
+ * Copyright © 2024. Cloud Software Group, Inc.
+ * This file is subject to the license terms contained
+ * in the license file that is distributed with this file.
+ */
+
+/* MILESONE DIAGRAM */
+div.content > div.visualization div.canvas > div.milestone-diagram {
+	flex: 1 1 auto;
+	position:relative;
+    display:flex;
+	/*background-color:lightyellow;
+	border:1px solid goldenrod;*/
+    padding-top:10px;
+}
+
+div.content > div.visualization div.canvas > div.milestone-diagram.horizontal {
+    flex-direction: row;
+}
+
+div.content > div.visualization div.canvas > div.milestone-diagram.vertical {
+    flex-direction: column;
+    padding-left:10px;
+}
+
+/* MILESTONE */
+div.content > div.visualization div.canvas > div.milestone-diagram > div.milestone {    
+    display:flex;
+    margin:1px;
+}
+
+div.content > div.visualization div.canvas > div.milestone-diagram.horizontal > div.milestone {    
+    flex-direction: column;
+}
+
+div.content > div.visualization div.canvas > div.milestone-diagram.vertical > div.milestone {    
+    flex-direction: row;
+}
+
+/* MILESTONE GRAPHICS */
+div.content > div.visualization div.canvas > div.milestone-diagram > div.milestone > div.graphic{    
+    display: flex;
+}
+
+div.content > div.visualization div.canvas > div.milestone-diagram.horizontal > div.milestone > div.graphic{    
+    flex-direction: row;
+    padding-left:63px; /* 150px / 2 - 24px / 2 (1/2 data width - 1/2 svg width) */
+}
+
+div.content > div.visualization div.canvas > div.milestone-diagram.vertical > div.milestone > div.graphic{    
+    flex-direction: column;
+}
+
+div.content > div.visualization div.canvas > div.milestone-diagram > div.milestone > div.graphic > svg{
+    width:24px;
+    height:24px;
+    z-index: 10;
+}
+
+div.content > div.visualization div.canvas > div.milestone-diagram > div.milestone > div.graphic > svg > circle{
+    cx:12;
+    cy:12;
+    r:9;
+    /*fill:grey;*/
+}
+
+div.content > div.visualization div.canvas > div.milestone-diagram > div.milestone > div.graphic.circle > svg > circle{
+    stroke-width:0.5;
+    stroke:#555555;
+}    
+
+div.content > div.visualization div.canvas > div.milestone-diagram > div.milestone > div.graphic.donut > svg > circle{
+    /*stroke:grey;*/
+    fill:none;
+    stroke-width:5;
+}
+
+div.content > div.visualization div.canvas > div.milestone-diagram > div.milestone > div.graphic > svg > rect{
+    /*fill:grey;*/
+    stroke-width:0.5;
+    stroke:#555555;
+}
+
+div.content > div.visualization div.canvas > div.milestone-diagram > div.milestone > div.graphic.square > svg > rect{
+    width:18px;
+    height:18px;
+    transform:translate(3px,3px);
+}
+
+div.content > div.visualization div.canvas > div.milestone-diagram > div.milestone > div.graphic.diamond > svg > rect{
+    width:16px;
+    height:16px;
+    transform:rotate(45deg) translate(9px,-8px);
+}
+
+div.content > div.visualization div.canvas > div.milestone-diagram > div.milestone > div.graphic > div.section-connector{
+    display:flex;
+    justify-content: center;
+    z-index: 9;
+}
+
+div.content > div.visualization div.canvas > div.milestone-diagram.horizontal > div.milestone > div.graphic > div.section-connector{
+    flex-direction: column;
+    width:150px;
+    height:100%;
+    margin-left:-5px;
+    margin-right:-70px; /* -7px - padding offset */
+}
+
+div.content > div.visualization div.canvas > div.milestone-diagram.vertical > div.milestone > div.graphic > div.section-connector{
+    flex-direction: row;
+    height:100px;
+    width:100%;
+    margin-top:-5px;
+    margin-bottom:-7px;
+}
+
+div.content > div.visualization div.canvas > div.milestone-diagram > div.milestone > div.graphic > div.section-connector > div.section-bar{
+    background-color: grey;
+}
+
+div.content > div.visualization div.canvas > div.milestone-diagram.horizontal > div.milestone > div.graphic > div.section-connector > div.section-bar{
+    width:100%;
+    height:10px;
+}
+
+div.content > div.visualization div.canvas > div.milestone-diagram.vertical > div.milestone > div.graphic > div.section-connector > div.section-bar{
+    width:10px;
+    height:100%;
+}
+
+
+/* MILESTONE DATA */
+div.content > div.visualization div.canvas > div.milestone-diagram > div.milestone > div.data{    
+    width:150px;
+    padding:3px;
+    user-select: none;
+}
+
+div.content > div.visualization div.canvas > div.milestone-diagram.horizontal > div.milestone > div.data{    
+    margin-top:3px;
+}
+
+div.content > div.visualization div.canvas > div.milestone-diagram.vertical > div.milestone > div.data{    
+    margin-left:3px;
+}
+
+/* MILESTONE DATA - TITLE */
+div.content > div.visualization div.canvas > div.milestone-diagram.horizontal > div.milestone > div.data > div.milestone-title{    
+    text-align: center;
+}
+
+/* MILESTONE DATA - TIME BLOCK */
+div.content > div.visualization div.canvas > div.milestone-diagram > div.milestone > div.data > div.time-block{
+    flex:1 1 auto;
+    display:flex;
+    min-width:125px;
+    height:50px;
+    justify-content: center;
+}
+
+div.content > div.visualization div.canvas > div.milestone-diagram > div.milestone > div.data > div.time-block > div.times{
+    flex:1 1 auto;
+    margin:2px;
+    padding-left:5px;
+    font-size:11px;
+}
+
+div.content > div.visualization div.canvas > div.milestone-diagram.horizontal > div.milestone > div.data > div.time-block > div.times{
+    flex:0 0 auto;
+}
+
+/* MILESTONE DATA - TIME */
+div.content > div.visualization div.canvas > div.milestone-diagram > div.milestone > div.data > div.time-block > div.times > div.time{
+    display:flex;
+}
+
+div.content > div.visualization div.canvas > div.milestone-diagram > div.milestone > div.data > div.time-block > div.times > div.time.predicted{
+    font-style:italic;
+}
+
+div.content > div.visualization div.canvas > div.milestone-diagram > div.milestone > div.data > div.time-block > div.times > div.time.actual{
+    font-weight:bold;
+}
+
+div.content > div.visualization div.canvas > div.milestone-diagram > div.milestone > div.data > div.time-block > div.times > div.time > div.delta{
+    margin-left:5px;
+}
+
+div.content > div.visualization div.canvas > div.milestone-diagram > div.milestone > div.data > div.time-block > div.times > div.time.delayed > div.delta{
+    color:crimson;
+}
+
+div.content > div.visualization div.canvas > div.milestone-diagram > div.milestone > div.data > div.time-block > div.times > div.time.on-time > div.delta{
+    color:green;
+}
+
+div.content > div.visualization div.canvas > div.milestone-diagram > div.milestone > div.data > div.time-block > div.times > div.time.early > div.delta{
+    color:green;
+}
+
+
+
+/* MARKING */
+div.content > div.visualization div.canvas > div.milestone-diagram.markable > div.milestone.markable > div.data:hover{
+    cursor:pointer;
+    border:2px solid black;
+    padding:1px;
+}
+
+div.content > div.visualization div.canvas > div.milestone-diagram.markable > div.milestone > div.graphic > svg.milestone.markable:hover{
+    cursor: pointer;
+}
+
+div.content > div.visualization div.canvas > div.milestone-diagram.markable > div.milestone > div.graphic > div.section-connector > div.section-bar.markable:hover{
+    cursor: pointer;
+}
+

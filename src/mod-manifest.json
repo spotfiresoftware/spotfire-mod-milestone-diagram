@@ -1,0 +1,138 @@
+{
+    "apiVersion": "1.3",
+    "version": "1.0.0",
+    "name": "Milestone Diagram",
+    "id": "milestone-diagram",
+    "icon": "icon.svg",
+    "properties": [
+        {
+            "name": "mod-config",
+            "type": "string",
+            "defaultValue": ""
+        }
+    ],
+    "dataViewDefinition": {
+        "colorAxis": {
+            "mode": "categorical",
+            "dropTarget": {
+                "icon": "Color",
+                "description": "Color by {0}"
+            }
+        },
+        "axes": [
+            {
+                "name": "Object Type",
+                "mode": "categorical",
+                "placement": "none"
+            },
+            {
+                "name": "Display Name",
+                "mode": "categorical",
+                "placement": "none"
+            },
+            {
+                "name": "Trellis By",
+                "mode": "categorical",
+                "placement": "none"
+            },
+            {
+                "name": "Milestone ID",
+                "mode": "categorical",
+                "placement": "none"
+            },
+            {
+                "name": "Planned Activation",
+                "mode": "continuous",
+                "placement": "none",
+                "allowNonAggregatingMeasures": true,
+                "dataTypes": {
+                    "allowNumeric": false,
+                    "allowDateTime": true
+                }
+            },
+            {
+                "name": "Planned Release",
+                "mode": "continuous",
+                "placement": "none",
+                "allowNonAggregatingMeasures": true,
+                "dataTypes": {
+                    "allowNumeric": false,
+                    "allowDateTime": true
+                }
+            },
+            {
+                "name": "Predicted Activation",
+                "mode": "continuous",
+                "placement": "none",
+                "allowNonAggregatingMeasures": true,
+                "dataTypes": {
+                    "allowNumeric": false,
+                    "allowDateTime": true
+                }
+            },
+            {
+                "name": "Predicted Release",
+                "mode": "continuous",
+                "placement": "none",
+                "allowNonAggregatingMeasures": true,
+                "dataTypes": {
+                    "allowNumeric": false,
+                    "allowDateTime": true
+                }
+            },
+            {
+                "name": "Actual Activation",
+                "mode": "continuous",
+                "placement": "none",
+                "allowNonAggregatingMeasures": true,
+                "dataTypes": {
+                    "allowNumeric": false,
+                    "allowDateTime": true
+                }
+            },
+            {
+                "name": "Actual Release",
+                "mode": "continuous",
+                "placement": "none",
+                "allowNonAggregatingMeasures": true,
+                "dataTypes": {
+                    "allowNumeric": false,
+                    "allowDateTime": true
+                }
+            },
+            {
+                "name": "Sequence",
+                "mode": "continuous",
+                "placement": "none",
+                "allowNonAggregatingMeasures": true,
+                "dataTypes": {
+                    "allowNumeric": true,
+                    "allowDateTime": false
+                }
+            },
+            {
+                "name": "Initial Milestone ID",
+                "mode": "categorical",
+                "placement": "none"
+            },
+            {
+                "name": "Terminal Milestone ID",
+                "mode": "categorical",
+                "placement": "none"
+            }
+        ]
+    },
+    "files": [
+        "index.html",
+        "main.css",
+        "default_configuration.js",
+        "default_configuration_template.js",
+        "main.js",
+        "milestone_diagram.css",
+        "milestone_diagram.js",
+        "process_objects.js",
+        "rect_marking.js",
+        "utility.js",
+        "viz_configuration.js"
+    ]
+}
